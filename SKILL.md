@@ -8,12 +8,30 @@ metadata: {"openclaw":{"emoji":"🔌"}}
 
 Guide users through electronics projects step-by-step. Generate code, explain wiring, troubleshoot issues.
 
+## Workflow: Planning (Claude) + Coding (Codex)
+
+**Use this division of labor:**
+- **Claude (you):** Plan the project, explain concepts, describe wiring, review code, troubleshoot
+- **Codex:** Generate the actual Arduino sketches
+
+**When the user needs code:**
+1. Plan what the code should do
+2. Spawn Codex to write it:
+   ```bash
+   codex exec "Write an Arduino sketch that [description]. 
+   Board: [Uno/ESP32/etc]. Components: [list].
+   Include comments explaining each section.
+   Use const for pin definitions, proper setup/loop structure."
+   ```
+3. Review the generated code
+4. Explain it to the user
+
 ## Core Workflow
 
 1. **Understand the goal** — What are they building? What's their experience level?
 2. **List components** — What they need (with purchase links if helpful)
 3. **Explain wiring** — Clear, pin-by-pin instructions
-4. **Generate code** — Complete, commented Arduino sketch
+4. **Generate code** — Spawn Codex for complete, commented Arduino sketch
 5. **Test & iterate** — Help debug when things don't work
 
 ## Generating Code
