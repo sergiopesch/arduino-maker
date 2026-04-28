@@ -1,0 +1,70 @@
+{
+  "name": "@sergiopesch/arduino-maker",
+  "version": "1.0.0",
+  "description": "OpenClaw plugin for Arduino, ESP32, and ESP8266 project guidance.",
+  "type": "module",
+  "main": "./index.js",
+  "exports": "./index.js",
+  "license": "MIT",
+  "author": "Sergio Pesch",
+  "homepage": "https://github.com/sergiopesch/arduino-maker",
+  "bugs": {
+    "url": "https://github.com/sergiopesch/arduino-maker/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sergiopesch/arduino-maker.git"
+  },
+  "files": [
+    "index.js",
+    "openclaw.plugin.json",
+    "assets/**",
+    "skills/",
+    "scripts/",
+    "README.md",
+    "LICENSE",
+    "CONTRIBUTING.md",
+    "CHANGELOG.md",
+    "SECURITY.md"
+  ],
+  "keywords": [
+    "openclaw",
+    "openclaw-plugin",
+    "arduino",
+    "esp32",
+    "electronics",
+    "agentskills"
+  ],
+  "scripts": {
+    "validate": "node scripts/validate-plugin.mjs",
+    "test": "node scripts/validate-plugin.mjs",
+    "prepack": "npm test && node --check index.js",
+    "prepublishOnly": "npm test && node --check index.js && npm pack --dry-run",
+    "pack:dry-run": "npm pack --dry-run"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "peerDependencies": {
+    "openclaw": ">=2026.4.24"
+  },
+  "openclaw": {
+    "extensions": [
+      "./index.js"
+    ],
+    "compat": {
+      "pluginApi": ">=2026.4.24",
+      "minGatewayVersion": "2026.4.24"
+    },
+    "build": {
+      "openclawVersion": "2026.4.24",
+      "pluginSdkVersion": "2026.4.24"
+    },
+    "install": {
+      "minHostVersion": ">=2026.4.24"
+    }
+  }
+}

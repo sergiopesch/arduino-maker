@@ -1,0 +1,14 @@
+{
+  "id": "arduino-maker",
+  "name": "Arduino Maker",
+  "description": "Arduino, ESP32, and ESP8266 project guidance with wiring, sketches, safety checks, and troubleshooting.",
+  "version": "1.0.0",
+  "skills": [
+    "./skills"
+  ],
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {}
+  }
+}
