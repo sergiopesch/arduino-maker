@@ -15,7 +15,6 @@ generate complete sketches, and troubleshoot hardware bring-up.
 - Component guides for LEDs, buttons, potentiometers, DHT sensors, servos, and HC-SR04
 - Beginner, intermediate, and advanced project prompts
 - Troubleshooting checklists for upload, compile, power, sensor, and I2C issues
-- A generated README hero image at `assets/arduino-maker-hero.png`
 - A local validation script for plugin metadata, skill frontmatter, release files, and markdown links
 
 ## Safety Scope
